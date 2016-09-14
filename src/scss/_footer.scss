@@ -1,0 +1,109 @@
+.footer {
+  @include clear;
+  padding: 13px 0;
+  background-color: #f1f1f1;
+
+  &-logo {
+    float: left;
+    margin-right: 20px;
+  }
+
+  &-contact {
+    float: left;
+
+    &_info {
+      margin-bottom: 5px;
+    }
+
+    &_number {
+      margin-bottom: 5px;
+    }
+
+    &_email {
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+
+    .footer-social {
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      margin-left: 1px;
+      background: url('../img/footer-social-bgr.png') 50% 50% no-repeat;
+
+      &:hover {
+        background: url('../img/footer-social-bgr-hover.png') 49% 51% no-repeat;
+        @extend %transition;
+      }
+    }
+  }  //end footer-contact
+
+  &-nav {
+    float: right;
+    width: 840px;
+    font-size: 0;
+    margin-top: 10px;
+
+    &_list {
+      font-size: $default-font-size;
+      display: inline-block;
+      width: 33%;
+      padding-left: 40px;
+      margin-bottom: 10px;
+
+      &--border {
+        background: url('../img/vertical-border.png') 100% 0 no-repeat;
+      }
+
+      &>.footer-nav_item {
+        margin-bottom: 10px;
+      }
+    }
+
+    &_item {
+      padding-left: 7px;
+      position: relative;
+      @extend %transition;
+
+      &:hover a::after {
+        opacity: 0;
+        @extend %transition;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -4px;
+        width: 4px;
+        height: 6px;
+        background: url('../img/point.svg') 0 0 no-repeat;
+      }
+
+      a {
+        position: relative;
+        color: #000;
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1px;
+          background-color: #000;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+
+    &_info {
+      font-size: $default-font-size;
+      padding-left: 40px;
+      margin: 0;
+    }
+  }
+} //end footer

@@ -5,26 +5,78 @@
     <title>Главная страница Ялмас</title>
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
+    <!-- START header -->
     <div class="header">
       <div class="l-layout">
-        <div class="header-logo"><img src="img/logo.png" alt=""></div>
-        <div class="header-base">
-          <div class="header-base_nav"></div>
-          <div class="header-base_search"></div>
+        <div class="header-logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
+        <div class="l-header-grid">
+            <ul class="header-nav">
+              <li class="header-nav_item"><a href="#">Фотоотчет</a></li>
+              <li class="header-nav_item"><a href="#">События</a></li>
+              <li class="header-nav_item"><a href="#">Форум</a></li>
+              <li class="header-nav_item"><a href="#">Контакты</a></li>
+            </ul>
+          <div class="header-search">
+            <form action="">
+              <div class="header-search_input"><input type="search" placeholder="Фраза для поиска"></div>
+              <div class="header-search_button"><input type="submit" value="Искать"></div>
+            </form>
+          </div>
         </div>
         <div class="header-actions">
-          <div class="header-actions-signin"></div>
-          <div class="header-actions-forgotpas"></div>
-          <div class="header-actions-social"></div>
+          <div class="header-actions-signin">
+            <a href="#">Войти</a><span>/</span><a href="#">Зарегистрироваться</a>
+          </div>
+          <a class="header-actions-forgotpas" href="#">Забыл пароль</a>
+          <div class="header-actions-social">
+            <div class="header-actions-social_title">Войти с помощью соц сетей:</div>
+            <a href="#" class="social-icon"><i class="tw"></i></a>
+            <a href="#" class="social-icon"><i class="vk"></i></a>
+            <a href="#" class="social-icon"><i class="fb"></i></a>
+            <a href="#" class="social-icon"><i class="g"></i></a>
+          </div>
         </div>
       </div>
     </div>
+    <!-- END header -->
 
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="js/main.js"></script>
+    <!-- START footer -->
+    <div class="footer">
+      <div class="l-layout">
+        <div class="footer-logo"><a href="#"><img src="img/logo-color.png" alt=""></a></div>
+        <div class="footer-contact">
+          <a href="#" class="footer-social"><i class="tw"></i></a>
+          <a href="#" class="footer-social"><i class="vk"></i></a>
+          <a href="#" class="footer-social"><i class="fb"></i></a>
+          <a href="#" class="footer-social"><i class="g"></i></a>
+          <div class="footer-contact_info"> © 2008 - 2015 Компания «Барс» </div>
+          <div class="footer-contact_number"> Телефон: +7 (921) 243-26-26</div>
+          <div class="footer-contact_email"> Email: <a href="#">shop@bars.su</a> </div>
+        </div>
+        <div class="footer-nav">
+          <ul class="footer-nav_list footer-nav_list--border">
+            <li class="footer-nav_item"><a href="#">Фотоотчет</a></li>
+            <li class="footer-nav_item"><a href="#">События</a></li>
+          </ul>
+          <ul class="footer-nav_list footer-nav_list--border">
+            <li class="footer-nav_item"><a href="#">Форум</a></li>
+            <li class="footer-nav_item"><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer-nav_list">
+            <li class="footer-nav_item"><a href="#">Войти</a></li>
+            <li class="footer-nav_item"><a href="#">Зарегистрироваться</a></li>
+          </ul>
+          <p class="footer-nav_info">Размещенная информация не является публичной офертой</p>
+        </div>
+      </div>
+    </div>
+    <!-- END footer -->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
