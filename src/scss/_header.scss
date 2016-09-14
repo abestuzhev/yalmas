@@ -1,0 +1,14 @@
+.header {
+  background: #eee url('../img/header-bg.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  @include clear;
+
+  &-logo {
+    width: 184px;
+    height: 124px;
+  }
+
+  &-base {
+    float: left;
+  }
+}

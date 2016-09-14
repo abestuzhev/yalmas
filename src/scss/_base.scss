@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+
+%outline {
+  outline: 1px solid #ccc;
+}
+
+@mixin clear {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+
+.l-layout {
+  @extend %outline;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}

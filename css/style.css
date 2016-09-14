@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box; }
+
+.l-layout {
+  outline: 1px solid #ccc; }
+
+.l-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative; }
+
+.header {
+  background: #eee url("../img/header-bg.jpg") 50% 50% no-repeat;
+  background-size: cover; }
+  .header::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .header-logo {
+    width: 184px;
+    height: 124px; }
+  .header-base {
+    float: left; }
