@@ -190,6 +190,7 @@ input {
       height: 25px;
       display: inline-block;
       margin-left: 1px;
+      margin-bottom: 7px;
       background: url("../img/footer-social-bgr.png") 50% 50% no-repeat; }
       .footer-contact .footer-social:hover {
         background: url("../img/footer-social-bgr-hover.png") 49% 51% no-repeat; }
