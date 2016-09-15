@@ -1,6 +1,7 @@
 body {
   font-size: 12px;
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7; }
 
 * {
   box-sizing: border-box; }
@@ -19,7 +20,7 @@ input {
   padding: 0;
   margin: 0; }
 
-.l-layout {
+.l-layout, .main-layout-left, .main-layout-right {
   outline: 1px solid #ccc; }
 
 .header-nav_item, .header-nav_item:hover a::after, .header-search_button input[type='submit'], .header-actions-signin a:hover::after, .header-actions-forgotpas:hover::after, .header-actions-social .social-icon:hover, .footer-contact .footer-social:hover, .footer-nav_item, .footer-nav_item:hover a::after {
@@ -59,7 +60,8 @@ input {
   background: #eee url("../../img/header-bg.jpg") 50% 50% no-repeat;
   background-size: cover;
   color: #fff;
-  padding-top: 10px; }
+  padding-top: 10px;
+  margin-bottom: 18px; }
   .header::after {
     content: '';
     display: block;
@@ -165,6 +167,10 @@ input {
         background: url("../img/social-bg.png") 50% 50% no-repeat; }
         .header-actions-social .social-icon:hover {
           background: url("../img/footer-social-bgr.png") 49% 51% no-repeat; }
+  .header-slider {
+    height: 327px;
+    background-color: #ccc;
+    margin-bottom: 48px; }
 
 .footer {
   padding: 13px 0;
@@ -239,3 +245,39 @@ input {
       font-size: 12px;
       padding-left: 40px;
       margin: 0; }
+
+.main::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.main-layout-left {
+  float: left;
+  width: 765px; }
+
+.main-layout-right {
+  float: right;
+  width: 460px; }
+
+.main .content-block_title {
+  padding-left: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0.5px 2px 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 #FFF;
+  background: #f7f7f7 url("../img/content-title.jpg") 0 0 repeat-x;
+  margin-bottom: 20px; }
+  .main .content-block_title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #0e5d31 url("../img/decor-vertical-line.jpg") 0 0 no-repeat;
+    width: 3px;
+    height: 100%; }
+  .main .content-block_title h2 {
+    height: 41px;
+    font-size: 22px;
+    line-height: 41px;
+    padding-right: 14px;
+    color: #000;
+    text-shadow: 0 1px #fff; }

@@ -4,6 +4,7 @@
   @include clear;
   color: #fff;
   padding-top: 10px;
+  margin-bottom: 18px;
 
   &-logo {
     float: left;
@@ -158,4 +159,10 @@
 
     } //end header-action-social
   } //end header-action
+
+  &-slider {
+    height: 327px;
+    background-color: #ccc;
+    margin-bottom: 48px;
+  }
 } //end header
