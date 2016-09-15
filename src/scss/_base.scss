@@ -77,3 +77,43 @@ input {
   background: url("../img/social/gl.svg") 40% 49%  no-repeat;
   background-size: auto 12px;
 }
+
+.block-title {
+    height: 41px;
+    line-height: 41px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    color: #333;
+    padding-left: 16px;
+    background: transparent url('../img/decor-vertical-line.jpg') repeat-y 0 0;
+}
+
+.side-block {
+  border-left: 3px solid #efefef;
+}
+
+.block-button {
+  display: inline-block;
+  padding-right: 27px;
+  padding-left: 16px;
+  position: relative;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 18px;
+    height: 7px;
+    background: url('../img/post-button-icon.png') 0 0 no-repeat;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

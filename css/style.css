@@ -23,7 +23,7 @@ input {
 .l-layout, .main-layout-left, .main-layout-right {
   outline: 1px solid #ccc; }
 
-.header-nav_item, .header-nav_item:hover a::after, .header-search_button input[type='submit'], .header-actions-signin a:hover::after, .header-actions-forgotpas:hover::after, .header-actions-social .social-icon:hover, .footer-contact .footer-social:hover, .footer-nav_item, .footer-nav_item:hover a::after {
+.header-nav_item, .header-nav_item:hover a::after, .header-search_button input[type='submit'], .header-actions-signin a:hover::after, .header-actions-forgotpas:hover::after, .header-actions-social .social-icon:hover, .footer-contact .footer-social:hover, .footer-nav_item, .footer-nav_item:hover a::after, .main .content-block-item, .main .content-block-item:hover {
   transition: all .1s ease-out; }
 
 .l-layout {
@@ -55,6 +55,39 @@ input {
 .g {
   background: url("../img/social/gl.svg") 40% 49% no-repeat;
   background-size: auto 12px; }
+
+.block-title {
+  height: 41px;
+  line-height: 41px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: italic;
+  color: #333;
+  padding-left: 16px;
+  background: transparent url("../img/decor-vertical-line.jpg") repeat-y 0 0; }
+
+.side-block {
+  border-left: 3px solid #efefef; }
+
+.block-button {
+  display: inline-block;
+  padding-right: 27px;
+  padding-left: 16px;
+  position: relative;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 10px; }
+  .block-button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 18px;
+    height: 7px;
+    background: url("../img/post-button-icon.png") 0 0 no-repeat; }
+  .block-button:hover {
+    text-decoration: underline; }
 
 .header {
   background: #eee url("../../img/header-bg.jpg") 50% 50% no-repeat;
@@ -259,25 +292,115 @@ input {
   float: right;
   width: 460px; }
 
-.main .content-block_title {
-  padding-left: 30px;
-  margin-bottom: 20px;
-  position: relative;
-  box-shadow: 0.5px 2px 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 #FFF;
-  background: #f7f7f7 url("../img/content-title.jpg") 0 0 repeat-x;
-  margin-bottom: 20px; }
-  .main .content-block_title::before {
+.main .content-block {
+  text-align: justify;
+  margin-bottom: 30px;
+  font-size: 0; }
+  .main .content-block::after {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #0e5d31 url("../img/decor-vertical-line.jpg") 0 0 no-repeat;
-    width: 3px;
-    height: 100%; }
-  .main .content-block_title h2 {
-    height: 41px;
-    font-size: 22px;
-    line-height: 41px;
-    padding-right: 14px;
-    color: #000;
-    text-shadow: 0 1px #fff; }
+    display: inline-block;
+    width: 100%; }
+  .main .content-block_title {
+    text-align: left;
+    padding-left: 30px;
+    position: relative;
+    box-shadow: 0.5px 2px 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 #FFF;
+    background: #f7f7f7 url("../img/content-title.jpg") 0 0 repeat-x;
+    margin-bottom: 20px;
+    font-size: 12px; }
+    .main .content-block_title::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #0e5d31 url("../img/decor-vertical-line.jpg") 0 0 no-repeat;
+      width: 3px;
+      height: 100%; }
+    .main .content-block_title h2 {
+      height: 41px;
+      font-size: 22px;
+      line-height: 41px;
+      padding-right: 14px;
+      color: #000;
+      text-shadow: 0 1px #fff;
+      margin-top: 0; }
+  .main .content-block-item {
+    display: inline-block;
+    position: relative;
+    width: 242px;
+    box-shadow: inset 0 1px 0 #FFF;
+    margin-bottom: 30px;
+    border: 1px solid #d3d3d3;
+    background: url("../img/items-list-item-useful-bg.png") 0 0 repeat; }
+    .main .content-block-item:hover {
+      box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.2); }
+    .main .content-block-item a {
+      color: #000; }
+    .main .content-block-item_img {
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+      margin-bottom: 5px; }
+      .main .content-block-item_img img {
+        max-width: 100%;
+        height: auto; }
+    .main .content-block-item_date {
+      text-align: left;
+      margin-bottom: 5px;
+      padding: 0 10px;
+      font-size: 10px; }
+    .main .content-block-item_title {
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 5px;
+      padding: 0 10px;
+      overflow: hidden;
+      height: 50px;
+      font-size: 14px; }
+    .main .content-block-item_text {
+      text-align: left;
+      padding: 5px 0;
+      padding: 10px;
+      padding-right: 50px;
+      overflow: hidden;
+      height: 58px;
+      vertical-align: middle;
+      font-size: 12px;
+      background: url("../img/horizontal-line.jpg") 0% 0% repeat-x; }
+    .main .content-block-item_button {
+      width: 48px;
+      height: 35px;
+      position: absolute;
+      bottom: 10px;
+      right: -5px;
+      background: url("../img/read-button.png") 50% 50% no-repeat; }
+
+.main .forum-list-post {
+  padding: 8px 16px;
+  margin-bottom: 20px; }
+  .main .forum-list-post:last-child {
+    margin-bottom: 35px; }
+  .main .forum-list-post_date {
+    color: #ccc;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 5px; }
+  .main .forum-list-post_title {
+    margin-bottom: 8px; }
+    .main .forum-list-post_title a {
+      font-size: 14px;
+      color: #002649;
+      text-decoration: underline; }
+      .main .forum-list-post_title a:hover {
+        text-decoration: none; }
+  .main .forum-list-post_info {
+    margin-bottom: 8px; }
+    .main .forum-list-post_info span {
+      margin-left: 3px; }
+  .main .forum-list-post_text {
+    color: #757575;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }

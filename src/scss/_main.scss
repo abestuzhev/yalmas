@@ -14,14 +14,24 @@
   }
 
   .content-block {
+    text-align: justify;
+    margin-bottom: 30px;
+    font-size: 0;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
 
     &_title {
+      text-align: left;
       padding-left: 30px;
-      margin-bottom: 20px;
       position: relative;
       box-shadow: 0.5px 2px 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 #FFF;
       background: #f7f7f7 url('../img/content-title.jpg') 0 0 repeat-x;
       margin-bottom: 20px;
+      font-size: 12px;
 
       &::before {
         content: '';
@@ -40,8 +50,130 @@
         padding-right: 14px;
         color: #000;
         text-shadow: 0 1px #fff;
+        margin-top: 0;
       }
     }
 
+    &-item {
+      display: inline-block;
+      position: relative;
+      width: 242px;
+      box-shadow: inset 0 1px 0 #FFF;
+      margin-bottom: 30px;
+      border: 1px solid #d3d3d3;
+      background: url('../img/items-list-item-useful-bg.png') 0 0 repeat;
+      @extend %transition;
+
+
+      &:hover {
+        box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.2);
+        @extend %transition;
+      }
+
+      a {
+        color: #000;
+
+      }
+
+      &_img {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        margin-bottom: 5px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      &_date {
+        text-align: left;
+        margin-bottom: 5px;
+        padding: 0 10px;
+        font-size: 10px;
+      }
+
+      &_title {
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 5px;
+        padding: 0 10px;
+        overflow: hidden;
+        height: 50px;
+        font-size: 14px;
+      }
+
+      &_text {
+        text-align: left;
+        padding: 5px 0;
+        padding: 10px;
+        padding-right: 50px;
+        overflow: hidden;
+        height: 58px;
+        vertical-align: middle;
+        font-size: 12px;
+        background: url('../img/horizontal-line.jpg') 0% 0% repeat-x;
+      }
+
+      &_button {
+        width: 48px;
+        height: 35px;
+        position: absolute;
+        bottom: 10px;
+        right: -5px;
+        background: url('../img/read-button.png') 50% 50% no-repeat;
+      }
+    }
+
+  } //end content-block
+  .forum-list {
+
+    &-post {
+      padding: 8px 16px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 35px;
+      }
+
+      &_date {
+        color: #ccc;
+        font-size: 12px;
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+
+      &_title {
+        margin-bottom: 8px;
+
+        a {
+          font-size: 14px;
+          color: #002649;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      &_info {
+        margin-bottom: 8px;
+
+        span {
+          margin-left:3px;
+        }
+      }
+
+      &_text {
+        color: #757575;
+        font-style: italic;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   }
 }

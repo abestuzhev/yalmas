@@ -1,98 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="ru">
+<head>
     <meta charset="utf-8">
-    <title>Главная страница Ялмас</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список страниц Restconcept</title>
     <link rel="shortcut icon" href="favicon.png">
+    <!--[if lt IE 10]><script src="js/IE9.js"></script><![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+</head>
+<style>
+    html { min-height: 100%; }
 
-    <!-- START header -->
-    <div class="header">
-      <div class="l-layout">
-        <div class="header-logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
-        <div class="l-header-grid">
-            <ul class="header-nav">
-              <li class="header-nav_item"><a href="#">Фотоотчет</a></li>
-              <li class="header-nav_item"><a href="#">События</a></li>
-              <li class="header-nav_item"><a href="#">Форум</a></li>
-              <li class="header-nav_item"><a href="#">Контакты</a></li>
-            </ul>
-          <div class="header-search">
-            <form action="">
-              <div class="header-search_input"><input type="search" placeholder="Фраза для поиска"></div>
-              <div class="header-search_button"><input type="submit" value="Искать"></div>
-            </form>
-          </div>
-        </div>
-        <div class="header-actions">
-          <div class="header-actions-signin">
-            <a href="#">Войти</a><span>/</span><a href="#">Зарегистрироваться</a>
-          </div>
-          <a class="header-actions-forgotpas" href="#">Забыл пароль</a>
-          <div class="header-actions-social">
-            <div class="header-actions-social_title">Войти с помощью соц сетей:</div>
-            <a href="#" class="social-icon"><i class="tw"></i></a>
-            <a href="#" class="social-icon"><i class="vk"></i></a>
-            <a href="#" class="social-icon"><i class="fb"></i></a>
-            <a href="#" class="social-icon"><i class="g"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="header-slider"></div>
-    <!-- END header -->
+    body {
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        min-height: 100%;
+        background: url('img/kIu-3idZnXo.jpg') no-repeat 50% 50%;
+        background-size: cover;
+        font: 16px/32px 'Roboto', sans-serif;
+    }
 
-    <!-- START main -->
-    <div class="main">
-      <div class="l-layout">
-        <div class="main-layout-left">
-          <div class="content-block">
-            <div class="content-block_title"><h2>События</h2></div>
-            <div class="content-block_item"></div>
-          </div>
-        </div>
-        <div class="main-layout-right"></div>
+    h1 {
+        color: #fff;
+        margin: 0 0 20px;
+        padding-bottom: 10px;
+        font-size: 28px;
+        border-bottom: 1px solid #fff;
+        font-weight: 700;
+        font-family: Roboto, Arial, sans-serif;
+    }
 
-      </div>
-    </div>
-    <!-- END main -->
+    ol {
+        padding: 0;
+        list-style-position: inside;
+    }
 
-    <!-- START footer -->
-    <div class="footer">
-      <div class="l-layout">
-        <div class="footer-logo"><a href="#"><img src="img/logo-color.png" alt=""></a></div>
-        <div class="footer-contact">
-          <a href="#" class="footer-social"><i class="tw"></i></a>
-          <a href="#" class="footer-social"><i class="vk"></i></a>
-          <a href="#" class="footer-social"><i class="fb"></i></a>
-          <a href="#" class="footer-social"><i class="g"></i></a>
-          <div class="footer-contact_info"> © 2008 - 2015 Компания «Барс» </div>
-          <div class="footer-contact_number"> Телефон: +7 (921) 243-26-26</div>
-          <div class="footer-contact_email"> Email: <a href="#">shop@bars.su</a> </div>
-        </div>
-        <div class="footer-nav">
-          <ul class="footer-nav_list footer-nav_list--border">
-            <li class="footer-nav_item"><a href="#">Фотоотчет</a></li>
-            <li class="footer-nav_item"><a href="#">События</a></li>
-          </ul>
-          <ul class="footer-nav_list footer-nav_list--border">
-            <li class="footer-nav_item"><a href="#">Форум</a></li>
-            <li class="footer-nav_item"><a href="#">Контакты</a></li>
-          </ul>
-          <ul class="footer-nav_list">
-            <li class="footer-nav_item"><a href="#">Войти</a></li>
-            <li class="footer-nav_item"><a href="#">Зарегистрироваться</a></li>
-          </ul>
-          <p class="footer-nav_info">Размещенная информация не является публичной офертой</p>
-        </div>
-      </div>
-    </div>
-    <!-- END footer -->
+    li {
+      position: relative;
+      padding-left: 25px;
+    }
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    .corrected::before {
+      content: '⌘';
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+    }
+
+    section {
+        margin: 50px auto;
+        max-width: 400px;
+        background: rgba(0, 0, 0, .4);
+        padding: 40px 60px;
+        /*padding-left: 0;*/
+        border-radius: 6px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    a:hover { color: #00AEEF; }
+</style>
+</head>
+
+<body>
+
+<section>
+
+    <h1>Ялмас</h1>
+
+    <ol>
+        <li><a href="home.html">Главная</a></li>
+        <li><a href="photo-report.html">Фотоотчет</a></li>
+        <li><a href="article.html">Поделиться</a></li>
+        <li><a href="events.html">События</a></li>
+        <li><a href="forum.html">Форум</a></li>
+        <li><a href="Contact.html">Контакты</a></li>
+    </ol>
+</section>
+
+</body>
 </html>
