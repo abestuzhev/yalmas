@@ -97,11 +97,11 @@ input {
 .block-button {
   display: inline-block;
   padding-right: 27px;
-  padding-left: 16px;
   position: relative;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
+  margin: 10px 0;
 
   &::after {
     content: '';

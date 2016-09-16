@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Главная страница Ялмас</title>
+    <title>Фотоотчеты</title>
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
     <!-- START header -->
     <div class="header">
       <div class="l-layout">
@@ -42,51 +43,17 @@
         </div>
       </div>
     </div>
-    <div class="header-slider"></div>
+    <div class="header-slider">
+      <div class="header-slider-item" style="background-image: url(img/aac3ee745d8173d24c9d4f1da67b61cd.jpg);"></div>
+      <div class="header-slider-item" style="background-image: url(img/69fde3e5634e89853e91a257615f8df5.jpg);"></div>
+    </div>
     <!-- END header -->
 
     <!-- START main -->
     <div class="main">
       <div class="l-layout">
         <div class="main-layout-left">
-          <div class="content-block">
-            <div class="content-block_title"><h2>События</h2></div>
-            <!-- START content-block-item -->
-            <div class="content-block-item">
-              <a href="#">
-                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
-                <div class="content-block-item_date">12.15.2016</div>
-                <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
-                <div class="content-block-item_text">Yamaha VK540 IV или Tundra WT 550 в Архангельске? Выбираем!</div>
-                <a href="#" class="content-block-item_button"></a>
-              </a>
-            </div>
-            <!-- END content-block-item -->
-            <!-- START content-block-item -->
-            <div class="content-block-item">
-              <a href="#">
-                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
-                <div class="content-block-item_date">12.15.2016</div>
-                <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
-                <div class="content-block-item_text">Yamaha VK540 IV или Tundra WT 550 в Архангельске? Выбираем!</div>
-                <a href="#" class="content-block-item_button"></a>
-              </a>
-            </div>
-            <!-- END content-block-item -->
-            <!-- START content-block-item -->
-            <div class="content-block-item">
-              <a href="#">
-                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
-                <div class="content-block-item_date">12.15.2016</div>
-                <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
-                <div class="content-block-item_text">Yamaha VK540 IV или Tundra WT 550 в Архангельске? Выбираем!</div>
-                <a href="#" class="content-block-item_button"></a>
-              </a>
-            </div>
-            <!-- END content-block-item -->
-          </div>
-
-          <div class="content-block">
+          <div class="content-block content-block--default">
             <div class="content-block_title"><h2>Фотоотчет</h2></div>
             <!-- START content-block-item -->
             <div class="content-block-item">
@@ -94,7 +61,12 @@
                 <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
                 <div class="content-block-item_date">12.15.2016</div>
                 <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
-                <div class="content-block-item_text">Yamaha VK540 IV или Tundra WT 550 в Архангельске? Выбираем!</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
                 <a href="#" class="content-block-item_button"></a>
               </a>
             </div>
@@ -105,7 +77,60 @@
                 <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
                 <div class="content-block-item_date">12.15.2016</div>
                 <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
-                <div class="content-block-item_text">Yamaha VK540 IV или Tundra WT 550 в Архангельске? Выбираем!</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
+                <a href="#" class="content-block-item_button"></a>
+              </a>
+            </div>
+            <!-- END content-block-item -->
+            <<!-- START content-block-item -->
+            <div class="content-block-item">
+              <a href="#">
+                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
+                <div class="content-block-item_date">12.15.2016</div>
+                <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
+                <a href="#" class="content-block-item_button"></a>
+              </a>
+            </div>
+            <!-- END content-block-item -->
+            <!-- START content-block-item -->
+            <div class="content-block-item">
+              <a href="#">
+                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
+                <div class="content-block-item_date">12.15.2016</div>
+                <div class="content-block-item_title">25 августа - розыгрыш!</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
+                <a href="#" class="content-block-item_button"></a>
+              </a>
+            </div>
+            <!-- END content-block-item -->
+            <!-- START content-block-item -->
+            <div class="content-block-item">
+              <a href="#">
+                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
+                <div class="content-block-item_date">12.15.2016</div>
+                <div class="content-block-item_title">25 августа - розыгрыш!</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
                 <a href="#" class="content-block-item_button"></a>
               </a>
             </div>
@@ -116,13 +141,82 @@
                 <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
                 <div class="content-block-item_date">12.15.2016</div>
                 <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
-                <div class="content-block-item_text">Yamaha VK540 IV или Tundra WT 550 в Архангельске? Выбираем!</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
+                <a href="#" class="content-block-item_button"></a>
+              </a>
+            </div>
+            <!-- END content-block-item -->
+            <!-- START content-block-item -->
+            <div class="content-block-item">
+              <a href="#">
+                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
+                <div class="content-block-item_date">12.15.2016</div>
+                <div class="content-block-item_title">25 августа - розыгрыш!</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
+                <a href="#" class="content-block-item_button"></a>
+              </a>
+            </div>
+            <!-- END content-block-item -->
+            <!-- START content-block-item -->
+            <div class="content-block-item">
+              <a href="#">
+                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
+                <div class="content-block-item_date">12.15.2016</div>
+                <div class="content-block-item_title">25 августа - розыгрыш!</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
+                <a href="#" class="content-block-item_button"></a>
+              </a>
+            </div>
+            <!-- END content-block-item -->
+            <!-- START content-block-item -->
+            <div class="content-block-item">
+              <a href="#">
+                <div class="content-block-item_img"><img src="img/9ecrDwpJbrM.jpg" alt=""></div>
+                <div class="content-block-item_date">12.15.2016</div>
+                <div class="content-block-item_title">25 августа -  розыгрыш! Самым быстрым - самое быстрое.</div>
+                <div class="content-block-item_text">
+                  <div class="content-block-item_text-grid">
+                    <p>с 08.05.16</p>
+                    <p>по 09.10.16</p>
+                  </div>
+                </div>
                 <a href="#" class="content-block-item_button"></a>
               </a>
             </div>
             <!-- END content-block-item -->
           </div>
+          <div class="pagination">
+            <div class="pagination-list-spec -list-pagenav" style="visibility: visible;">
+    					<li class="pagenav-left pagenav-arrow -spn-left -list-pn-backward pn-disabled"><a href="javascript:void(0)"><span></span></a></li>
+    					<li class="pagenav-right pagenav-arrow -spn-right -list-pn-forward"><a href="javascript:void(0)"><span></span></a></li>
+    					<div class="-spn-clip" style="width: 204px;">
+    						<ul class="-spn-ribbon -list-pn-clip" style="width: 204px;">
+                  <li class="active glowing"><a href="javascript:void(0)">1</a></li>
+                  <li class=""><a href="javascript:void(0)">2</a></li>
+                  <li><a href="javascript:void(0)">3</a></li>
+                  <li><a href="javascript:void(0)">4</a></li>
+                  <li><a href="javascript:void(0)">5</a></li>
+                </ul>
+    					</div>
+    				</div>
+          </div>
         </div>
+
         <div class="main-layout-right">
           <div class="forum">
             <div class="block-title">Форум</div>
@@ -152,35 +246,46 @@
                 </div>
                 <div class="forum-list-post_text">" Хей, ребят вы вообще в курсе что гидроосколки это вам не хухры мухры "</div>
               </div>
-              <div class="forum-list-post">
-                <div class="forum-list-post_date">22.08.2016</div>
-                <div class="forum-list-post_title"><a href="#">Тема: Can-Am Maverick X3</a></div>
-                <div class="forum-list-post_info">
-                  <span>Последнее сообщение:</span><span class="user-name">Большой брат</span>,<span class="post-time">11:22</span>,<span class="post-date">22.02.2016</span>
-                </div>
-                <div class="forum-list-post_text">" Хей, ребят вы вообще в курсе что гидроосколки это вам не хухры мухры "</div>
-              </div>
-              <div class="forum-list-post">
-                <div class="forum-list-post_date">22.08.2016</div>
-                <div class="forum-list-post_title"><a href="#">Тема: Can-Am Maverick X3</a></div>
-                <div class="forum-list-post_info">
-                  <span>Последнее сообщение:</span><span class="user-name">Большой брат</span>,<span class="post-time">11:22</span>,<span class="post-date">22.02.2016</span>
-                </div>
-                <div class="forum-list-post_text">" Хей, ребят вы вообще в курсе что гидроосколки это вам не хухры мухры "</div>
-              </div>
-              <div class="forum-list-post">
-                <div class="forum-list-post_date">22.08.2016</div>
-                <div class="forum-list-post_title"><a href="#">Тема: Can-Am Maverick X3</a></div>
-                <div class="forum-list-post_info">
-                  <span>Последнее сообщение:</span><span class="user-name">Большой брат</span>,<span class="post-time">11:22</span>,<span class="post-date">22.02.2016</span>
-                </div>
-                <div class="forum-list-post_text">" Хей, ребят вы вообще в курсе что гидроосколки это вам не хухры мухры "</div>
-              </div>
               <a href="#" class="block-button">Перейти на форум</a>
             </div>
           </div>
-        </div>
 
+          <div class="events">
+            <div class="block-title">События</div>
+            <div class="events-list side-block">
+              <!-- START events-list-pos -->
+              <div class="events-list-post">
+                <div class="events-list-post_img"><img src="img/events-img.jpg" alt=""></div>
+                <div class="events-list-post-grid">
+                  <div class="events-list-post_date">12.15.16</div>
+                  <div class="events-list-post_title"><a href="#">Экспедиция на белое море</a></div>
+                </div>
+              </div>
+              <!-- END events-list-pos -->
+              <!-- START events-list-pos -->
+              <div class="events-list-post">
+                <div class="events-list-post_img"><img src="img/events-img.jpg" alt=""></div>
+                <div class="events-list-post-grid">
+                  <div class="events-list-post_date">12.15.16</div>
+                  <div class="events-list-post_title"><a href="#">Экспедиция на белое море в три строки для проверки интерльяжа</a></div>
+                </div>
+              </div>
+              <!-- END events-list-pos -->
+              <!-- START events-list-pos -->
+              <div class="events-list-post">
+                <div class="events-list-post_img"><img src="img/events-img.jpg" alt=""></div>
+                <div class="events-list-post-grid">
+                  <div class="events-list-post_date">12.15.16</div>
+                  <div class="events-list-post_title"><a href="#">Экспедиция на белое море в две строки</a></div>
+                </div>
+              </div>
+              <!-- END events-list-pos -->
+
+              <a href="#" class="block-button">Все события</a>
+            </div>
+          </div>
+        </div>
+        <!-- END main-layout-right -->
       </div>
     </div>
     <!-- END main -->
@@ -216,8 +321,9 @@
       </div>
     </div>
     <!-- END footer -->
-
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

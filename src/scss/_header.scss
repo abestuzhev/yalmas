@@ -161,8 +161,15 @@
   } //end header-action
 
   &-slider {
-    height: 327px;
-    background-color: #ccc;
     margin-bottom: 48px;
+
+    &-item {
+      height: 327px;
+      background-color: #ccc;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+    }
   }
 } //end header
