@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-size: 12px;
   font-family: Arial, sans-serif;
@@ -19,9 +20,6 @@ input {
   border: none;
   padding: 0;
   margin: 0; }
-
-.l-layout, .main-layout-left, .main-layout-right {
-  outline: 1px solid #ccc; }
 
 .header-nav_item, .header-nav_item:hover a::after, .header-search_button input[type='submit'], .header-actions-signin a:hover::after, .header-actions-forgotpas:hover::after, .header-actions-social .social-icon:hover, .footer-contact .footer-social:hover, .footer-nav_item, .footer-nav_item:hover a::after, .main .content-block-item, .main .content-block-item:hover {
   transition: all .1s ease-out; }
@@ -273,7 +271,7 @@ table {
     font-size: 12px; }
 
 .header {
-  background: #eee url("../../img/header-bg.jpg") 50% 50% no-repeat;
+  background: #197240 url("../img/header-bg.jpg") 50% 50% no-repeat;
   background-size: cover;
   color: #fff;
   padding-top: 10px;
@@ -384,7 +382,8 @@ table {
         .header-actions-social .social-icon:hover {
           background: url("../img/footer-social-bgr.png") 49% 51% no-repeat; }
   .header-slider {
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    cursor: pointer; }
     .header-slider-item {
       height: 327px;
       background-color: #ccc;
@@ -485,6 +484,10 @@ table {
   font-size: 0; }
   .main .content-block--default {
     margin: 0; }
+  .main .content-block:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
   .main .content-block::after {
     content: '';
     display: inline-block;
@@ -515,6 +518,7 @@ table {
       margin-top: 0; }
   .main .content-block-item {
     display: inline-block;
+    vertical-align: top;
     position: relative;
     width: 242px;
     box-shadow: inset 0 1px 0 #FFF;
@@ -563,6 +567,8 @@ table {
         .main .content-block-item_text-grid p {
           margin: 0;
           padding: 0; }
+    .main .content-block-item .date-block {
+      display: table; }
     .main .content-block-item_button {
       width: 48px;
       height: 35px;
@@ -718,3 +724,10 @@ table {
 .main .content-block-article_text .text-social {
   font-size: 10px;
   margin-bottom: 5px; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* стили только для IE10 */
+  .main .content-block-item {
+    margin-right: 18px; }
+    .main .content-block-item:last-child {
+      margin-right: 0; } }

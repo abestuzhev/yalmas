@@ -1,5 +1,5 @@
 .header {
-  background: #eee url('../../img/header-bg.jpg') 50% 50% no-repeat;
+  background: #197240 url('../img/header-bg.jpg') 50% 50% no-repeat;
   background-size: cover;
   @include clear;
   color: #fff;
@@ -44,7 +44,6 @@
           background-color: #fff;
           opacity: 1;
         }
-
       }
     }
   }
@@ -98,8 +97,7 @@
     } //end header-search_button
   } //end header-search
 
-  //-actions
-
+  //actions
   &-actions {
     float: right;
     text-align: right;
@@ -156,12 +154,12 @@
           @extend %transition;
         }
       }
-
     } //end header-action-social
   } //end header-action
 
   &-slider {
     margin-bottom: 48px;
+    cursor: pointer;
 
     &-item {
       height: 327px;
@@ -169,7 +167,6 @@
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
-
     }
-  }
+  } //slider
 } //end header
