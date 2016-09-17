@@ -319,7 +319,13 @@
           font-weight: 700;
           line-height: 12px;
           text-transform: uppercase;
-          a {color: #000}
+          a {
+            color: #000;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
 
         &_subtitle {
