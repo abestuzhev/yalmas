@@ -216,6 +216,10 @@ table {
   font-size: 12px;
   border: 1px solid #e1e1e1;
   border-collapse: collapse; }
+  table a {
+    color: #08753B; }
+    table a:hover {
+      text-decoration: underline; }
   table h4 {
     margin: 0;
     margin-bottom: 5px;
@@ -223,6 +227,8 @@ table {
   table p {
     margin: 0;
     margin-bottom: 10px; }
+  table .last-message {
+    display: block; }
   table th {
     padding: 8px 0;
     border: 1px solid #e1e1e1;
@@ -690,6 +696,8 @@ table {
         text-transform: uppercase; }
         .main .events-list-post_title a {
           color: #000; }
+          .main .events-list-post_title a:hover {
+            text-decoration: underline; }
       .main .events-list-post_subtitle {
         margin-top: 5px;
         font-size: 12px; }

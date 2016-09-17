@@ -49,6 +49,7 @@
   opacity: 1;
 }
 
+
 .pagination-list-spec,
 .pagination-list-spec li,
 .pagination-list-spec a {
@@ -143,6 +144,8 @@
 }
 
 //table
+
+
 .main .content-block .default,
 .main .content-block .default h2 {
   margin: 0;
@@ -154,6 +157,14 @@ table {
   border: 1px solid #e1e1e1;
   border-collapse: collapse;
 
+  a {
+    color: #08753B;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   h4 {
     margin: 0;
     margin-bottom: 5px;
@@ -164,6 +175,11 @@ table {
     margin: 0;
     margin-bottom: 10px;
   }
+
+  .last-message {
+    display: block;
+  }
+
 
   th {
     padding: 8px 0;
@@ -223,6 +239,7 @@ table {
     color: #08753B;
     margin: 0;
   }
+
 
   .table-date {
     font-size: 12px;
