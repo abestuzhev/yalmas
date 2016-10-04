@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('.header-slider').slick({
+    arrows: false,
     autoplay: true,
 		autoplaySpeed: 5000
   });

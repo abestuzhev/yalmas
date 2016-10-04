@@ -161,13 +161,10 @@ input {
 
 .pagination-list-spec .-spn-clip {
   position: relative;
-  overflow: hidden;
-  height: 27px;
-  width: 300px; }
+  height: 27px; }
 
 .pagination-list-spec .-spn-ribbon {
   font-size: 0;
-  position: absolute;
   top: 0;
   left: 0; }
 
@@ -388,6 +385,7 @@ table {
         .header-actions-social .social-icon:hover {
           background: url("../img/footer-social-bgr.png") 49% 51% no-repeat; }
   .header-slider {
+    max-width: 100%;
     margin-bottom: 48px;
     cursor: pointer; }
     .header-slider-item {
