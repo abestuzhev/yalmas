@@ -94,13 +94,13 @@ input {
 .-scr-pn {
   position: relative; }
 
-.-spn-left,
-.-spn-right {
+.-spn-left {
   position: absolute;
   left: 10px; }
 
 .-spn-right {
-  left: auto;
+  position: absolute;
+  top: 10px;
   right: 10px; }
 
 .new-pagenav {
