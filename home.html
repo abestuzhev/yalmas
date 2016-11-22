@@ -34,17 +34,131 @@
           </div>
         </div>
         <div class="header-actions">
-          <div class="header-actions-signin">
-            <a href="#">Войти</a><span>/</span><a href="#">Зарегистрироваться</a>
-          </div>
-          <a class="header-actions-forgotpas" href="#">Забыл пароль</a>
-          <div class="header-actions-social">
-            <div class="header-actions-social_title">Войти с помощью соц сетей:</div>
-            <a href="#" class="social-icon"><i class="tw"></i></a>
-            <a href="#" class="social-icon"><i class="vk"></i></a>
-            <a href="#" class="social-icon"><i class="fb"></i></a>
-            <a href="#" class="social-icon"><i class="g"></i></a>
-          </div>
+        <!--new action-->
+            <div class="header-authorisation-button">
+                <a href="javascript:void(0)" class="-ag-open-auth-win"></a>
+                <span>Вход / Регистрация</span>
+            </div>
+            <script>
+                $('.header-authorisation-popup-login').prependTo('.header-authorisation-popup-form');
+
+                // подцепляем формы...
+                $('.-ag-auth-form').submit(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: $(this).attr('action'),
+                        data: $(this).serialize(), // serializes the form's elements.
+                        type: "POST",
+                        beforeSend: function (xhr) {
+                            $('.-ag-auth-form input[name="Login"]').val('');
+                            $('.-ag-auth-form .-af-loader').css('visibility', 'visible');
+                        },
+                        success: function (res) {
+                            $('.-ag-auth-form input[name="Login"]').val('Войти');
+                            $('.-ag-auth-form .-af-loader').css('visibility', 'hidden');
+                            agErrors = $('.-ag-auth-errors', res).html();
+
+                            if (agErrors.length > 0) {
+                                $('.-ag-auth-errors').html(agErrors);
+                            } else {
+                                location.reload();
+                            }
+                        }
+                    });
+
+                    return false; // avoid to execute the actual submit of the form.
+                });
+
+                $('.-ag-open-auth-win').on('click', 'span', function () {
+                    $('.header-authorisation').toggleClass('-auth-popup-shown');
+                });
+            </script>
+
+            <!--'end_frame_cache_iIjGFB'-->
+            <script>
+                $('.-ag-open-auth-win').on('click', 'span', function () {
+                    $('.header-authorisation').toggleClass('-auth-popup-shown');
+                });
+            </script>
+            <div class="header-authorisation-popup">
+                <div class="header-authorisation-popup-form"><div class="header-authorisation-popup-login">
+
+                    <form name="system_auth_form" method="post" target="_top" action="/?login=yes" class="-ag-auth-form">
+
+                        <p class="header-auth-error -ag-auth-errors"></p>
+
+                        <input type="hidden" name="backurl" value="/">
+                        <input type="hidden" name="AUTH_FORM" value="Y">
+                        <input type="hidden" name="TYPE" value="AUTH">
+
+                        <div class="line">
+                            <div class="column">
+                                <input type="text" name="USER_LOGIN" maxlength="50" value="" placeholder="e-mail" class="-ignore-placeholder">
+                            </div>
+                            <div class="column">
+                                <input type="password" name="USER_PASSWORD" maxlength="50" autocomplete="off" placeholder="пароль" class="-ignore-placeholder">
+                            </div>
+                        </div>
+                        <input type="hidden" id="USER_REMEMBER_frm" name="USER_REMEMBER" value="Y">
+
+                        <div class="line">
+                            <div class="column">
+                                <div class="social clearfix">
+                                    <div class="social-label">Войти через:</div>
+                                    <ul class="social-list">
+                                        <li class="fb"><a href="javascript:void(0)" onclick="BX.util.popup('https://www.facebook.com/dialog/oauth?client_id=716579915098789&amp;redirect_uri=http%3A%2F%2Fbars.su%2F%3Fauth_service_id%3DFacebook%26check_key%3D2ceb444b7059161e5272e511fc3128b3%26backurl%3D%252F&amp;scope=email,publish_actions&amp;display=popup', 580, 400)">Facebook</a></li>
+                                        <li class="tw"><a href="javascript:void(0)" onclick="BX.util.popup('/?ncc=1&amp;auth_service_id=Twitter&amp;check_key=2ceb444b7059161e5272e511fc3128b3&amp;backurl=%2F', 800, 450)">Twitter</a></li>
+                                        <li class="vk"><a href="javascript:void(0)" onclick="BX.util.popup('https://oauth.vk.com/authorize?client_id=4536702&amp;redirect_uri=http%3A%2F%2Fbars.su%2F%3Fauth_service_id%3DVKontakte&amp;scope=friends,notify,offline,email&amp;response_type=code&amp;state=site_id%3Ds1%26backurl%3D%252F%253Fcheck_key%253D2ceb444b7059161e5272e511fc3128b3%26redirect_url%3D%252F', 660, 425)">ВКонтакте</a></li>
+                                        <li class="gp"><a href="javascript:void(0)" onclick="BX.util.popup('https://accounts.google.com/o/oauth2/auth?client_id=1071586721860-2o2sb3fmesq40fr2k89ca6s9moo0tlf0.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Fbars.su%2Fbitrix%2Ftools%2Foauth%2Fgoogle.php&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.google.com%2Fm8%2Ffeeds&amp;response_type=code&amp;access_type=offline&amp;state=provider%3DGoogleOAuth%26site_id%3Ds1%26backurl%3D%252F%253Fcheck_key%253D2ceb444b7059161e5272e511fc3128b3%26mode%3Dopener%26redirect_url%3D%252F', 580, 400)">Google</a></li>
+                                        <li class="ok"><a href="javascript:void(0)" onclick="BX.util.popup('http://www.odnoklassniki.ru/oauth/authorize?client_id=1100572416&amp;redirect_uri=http%3A%2F%2Fbars.su%2Fbitrix%2Ftools%2Foauth%2Fodnoklassniki.php&amp;response_type=code&amp;state=site_id%3Ds1%26backurl%3D%252F%253Fcheck_key%253D2ceb444b7059161e5272e511fc3128b3%26redirect_url%3D%252F%26mode%3Dopener', 580, 400)">Одноклассники</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column authgag-button">
+                                <input type="submit" value="Войти" name="Login">
+                                <div class="-af-loader authgag-loader"></div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="user-forgot-password">
+                                <noindex><img src="/bitrix/templates/main/img/cart-coupon-help.png"><a href="/auth/?forgot_password=yes" rel="nofollow">Забыли пароль?</a></noindex>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                    <p class="header-reg-error -ag-reg-errors"></p>
+                    <div class="header-authorisation-popup-register">
+                        <form method="post" action="/" name="regform" class="-ag-reg-form">
+
+                            <div class="line">
+                                <div class="column">
+                                    <input placeholder="ваш e-mail" type="text" name="REGISTER[LOGIN]" value="" class="-ignore-placeholder">
+                                </div>
+                                <div class="column authgag-button">
+                                    <input type="submit" value="Зарегистрироваться" name="register_submit_button">
+                                    <div class="-af-loader authgag-loader"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        <!--end new action-->
+          <!--<div class="header-actions-signin">-->
+            <!--<a href="#">Войти</a><span>/</span><a href="#">Зарегистрироваться</a>-->
+          <!--</div>-->
+          <!--<a class="header-actions-forgotpas" href="#">Забыл пароль</a>-->
+          <!--<div class="header-actions-social">-->
+            <!--<div class="header-actions-social_title">Войти с помощью соц сетей:</div>-->
+            <!--<a href="#" class="social-icon"><i class="tw"></i></a>-->
+            <!--<a href="#" class="social-icon"><i class="vk"></i></a>-->
+            <!--<a href="#" class="social-icon"><i class="fb"></i></a>-->
+            <!--<a href="#" class="social-icon"><i class="g"></i></a>-->
+          <!--</div>-->
         </div>
       </div>
     </div>
