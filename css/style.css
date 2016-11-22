@@ -344,9 +344,8 @@ table {
         background-color: #EDEDED;
         box-shadow: 0.5px 0.9px 1px rgba(0, 0, 0, 0.22), inset 0 1px 0 #FFF; }
         .header-search_button input[type='submit']:active {
-          -webkit-transform: scale(0.98);
-              -ms-transform: scale(0.98);
-                  transform: scale(0.98); }
+          -ms-transform: scale(0.98);
+              transform: scale(0.98); }
   .header-actions {
     float: right;
     text-align: right; }
@@ -394,6 +393,216 @@ table {
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat; }
+
+/*header-authorisation*/
+.header-authorisation {
+  padding: 6px 0 0 0;
+  text-align: right;
+  position: relative; }
+
+.header-authorisation-button {
+  padding: 8px 20px;
+  margin-right: -20px; }
+
+.header-authorisation-button,
+.header-authorisation-button a,
+.header-authorisation-button span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline; }
+
+.header-authorisation-button a {
+  padding-left: 35px;
+  background: transparent url("../img/authorisation-icon.png") no-repeat 0 0;
+  text-decoration: none; }
+
+.header-authorisation-button a:hover span {
+  text-decoration: none; }
+
+.header-authorisation-button span {
+  height: 28px;
+  line-height: 28px;
+  text-decoration: underline;
+  color: #fff;
+  font-size: 14px; }
+
+.header-authorisation-popup {
+  display: none;
+  position: absolute;
+  top: 48px;
+  right: -30px;
+  width: 451px;
+  padding-top: 7px;
+  border-radius: 4px;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.55);
+  z-index: 10;
+  background: #f4f4f4 url("../img/header-authorisation-popup-bg.png") repeat-x 0 100%; }
+
+.header-authorisation-popup-login {
+  padding: 18px 26px 14px;
+  background: transparent url("../img/hr.png") repeat-x 0 0; }
+
+.header-authorisation-popup-register {
+  padding: 20px 26px 28px;
+  background: transparent url("../img/hr.png") repeat-x 0 0; }
+
+.header-authorisation-popup-form input[type="text"],
+.header-authorisation-popup-form input[type="password"] {
+  text-align: center;
+  display: block;
+  width: 152px;
+  padding: 3px 15px;
+  border: none;
+  background-color: #ebebeb;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.75), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to top, #f3f3f3, #e5e4e4); }
+
+.header-authorisation-popup-form input[type="submit"] {
+  text-align: center;
+  cursor: pointer;
+  width: 184px;
+  padding: 3px 0;
+  border: none;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px #717171;
+  background-image: linear-gradient(to top, #f2c52c, #fbdc60);
+  font-size: 14px;
+  color: #000;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.81); }
+
+.header-authorisation-popup .line {
+  margin-top: 4px; }
+
+.header-authorisation-popup .line:before,
+.header-authorisation-popup .line:after {
+  content: " ";
+  display: table; }
+
+.header-authorisation-popup .line:after {
+  clear: both; }
+
+.header-authorisation-popup .line {
+  zoom: 1; }
+
+.header-authorisation-popup .line:first-child {
+  margin-top: 0; }
+
+.header-authorisation-popup .column {
+  float: left;
+  width: 183px;
+  margin-left: 23px; }
+
+.header-authorisation-popup .column:first-child {
+  margin-left: 0; }
+
+.header-authorisation-popup .social {
+  margin-top: 6px; }
+
+.header-authorisation-popup .social-label {
+  float: left;
+  font-size: 12px;
+  color: #646262; }
+
+.header-authorisation-popup .social-list,
+.header-authorisation-popup .social-list li,
+.header-authorisation-popup .social-list a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none; }
+
+.header-authorisation-popup .social-list {
+  float: right; }
+
+.header-authorisation-popup .social-list li {
+  float: left;
+  margin-left: 2px; }
+
+.header-authorisation-popup .social-list li:first-child {
+  margin-left: 0; }
+
+.header-authorisation-popup .social-list li a {
+  width: 17px;
+  height: 17px;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -9999px;
+  background: transparent url("../img/header-authorisation-popup-social-sprite.png") no-repeat 0 0; }
+
+.header-authorisation-popup .social-list li.vk a {
+  background-position: 0 0; }
+
+.header-authorisation-popup .social-list li.fb a {
+  background-position: -17px 0; }
+
+.header-authorisation-popup .social-list li.ok a {
+  background-position: -34px 0; }
+
+.header-authorisation-popup .social-list li.tw a {
+  background-position: -51px 0; }
+
+.header-authorisation-popup .social-list li.gp a {
+  background-position: -68px 0; }
+
+.header-authorisation:hover .header-authorisation-button {
+  /*
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #ebeaea;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75);
+  background-image: -webkit-linear-gradient(bottom, #f4f4f4 20%, #e1dfdf);
+  background-image: -moz-linear-gradient(bottom, #f4f4f4 20%, #e1dfdf);
+  background-image: -o-linear-gradient(bottom, #f4f4f4 20%, #e1dfdf);
+  background-image: linear-gradient(to top, #f4f4f4 20%, #e1dfdf);
+  */ }
+
+.header-authorisation:hover .header-authorisation-button span {
+  text-decoration: none; }
+
+.header-authorisation:hover .header-authorisation-popup {
+  /*display: block;*/ }
+
+/* auth */
+.-auth-popup-shown .header-authorisation-popup {
+  display: block; }
+
+.-auth-popup-shown .header-authorisation-button {
+  border-radius: 4px;
+  background-color: #ebeaea;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75);
+  background-image: linear-gradient(to top, #f4f4f4 20%, #e1dfdf); }
+
+.-auth-popup-shown .header-authorisation-button span {
+  text-decoration: none; }
+
+.header-auth-error,
+.header-reg-error {
+  color: red;
+  text-align: left; }
+
+.header-reg-error {
+  margin-left: 25px; }
+
+.authgag-button {
+  position: relative; }
+
+.authgag-loader {
+  position: absolute;
+  top: 3px;
+  left: 85px;
+  width: 20px;
+  height: 20px;
+  background: url(/bitrix/templates/main/img/loaders/add2basket20x20.gif) 0 0 no-repeat scroll;
+  cursor: pointer;
+  cursor: hand;
+  visibility: hidden; }
 
 .footer {
   padding: 13px 0;
