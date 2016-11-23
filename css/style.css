@@ -344,8 +344,9 @@ table {
         background-color: #EDEDED;
         box-shadow: 0.5px 0.9px 1px rgba(0, 0, 0, 0.22), inset 0 1px 0 #FFF; }
         .header-search_button input[type='submit']:active {
-          -ms-transform: scale(0.98);
-              transform: scale(0.98); }
+          -webkit-transform: scale(0.98);
+              -ms-transform: scale(0.98);
+                  transform: scale(0.98); }
   .header-actions {
     float: right;
     text-align: right; }
@@ -452,7 +453,7 @@ table {
 .header-authorisation-popup-form input[type="password"] {
   text-align: center;
   display: block;
-  width: 152px;
+  width: 100%;
   padding: 3px 15px;
   border: none;
   background-color: #ebebeb;
@@ -468,9 +469,9 @@ table {
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 1px 1px #717171;
-  background-image: linear-gradient(to top, #f2c52c, #fbdc60);
+  background-image: linear-gradient(to top, #10974c, #0e5d31);
   font-size: 14px;
-  color: #000;
+  color: #fff;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.81); }
 
 .header-authorisation-popup .line {
@@ -493,7 +494,8 @@ table {
 .header-authorisation-popup .column {
   float: left;
   width: 183px;
-  margin-left: 23px; }
+  margin-left: 23px;
+  margin-bottom: 4px; }
 
 .header-authorisation-popup .column:first-child {
   margin-left: 0; }
@@ -533,20 +535,34 @@ table {
   text-indent: -9999px;
   background: transparent url("../img/header-authorisation-popup-social-sprite.png") no-repeat 0 0; }
 
-.header-authorisation-popup .social-list li.vk a {
+.header-authorisation-popup .social-list li.popap-vk a {
   background-position: 0 0; }
 
-.header-authorisation-popup .social-list li.fb a {
+.header-authorisation-popup .social-list li.popap-fb a {
   background-position: -17px 0; }
 
-.header-authorisation-popup .social-list li.ok a {
+.header-authorisation-popup .social-list li.popap-ok a {
   background-position: -34px 0; }
 
-.header-authorisation-popup .social-list li.tw a {
+.header-authorisation-popup .social-list li.popap-tw a {
   background-position: -51px 0; }
 
-.header-authorisation-popup .social-list li.gp a {
+.header-authorisation-popup .social-list li.popap-gp a {
   background-position: -68px 0; }
+
+.user-forgot-password {
+  text-align: left;
+  top: 15px;
+  position: relative;
+  vertical-align: middle;
+  color: #000; }
+
+.user-forgot-password img {
+  vertical-align: middle;
+  margin-right: 4px; }
+
+.user-forgot-password a {
+  color: #000; }
 
 .header-authorisation:hover .header-authorisation-button {
   /*
@@ -580,7 +596,8 @@ table {
   background-image: linear-gradient(to top, #f4f4f4 20%, #e1dfdf); }
 
 .-auth-popup-shown .header-authorisation-button span {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #000; }
 
 .header-auth-error,
 .header-reg-error {

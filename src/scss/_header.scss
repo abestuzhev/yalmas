@@ -237,7 +237,7 @@
 .header-authorisation-popup-form input[type="password"] {
   text-align: center;
   display: block;
-  width: 152px;
+  width: 100%;
   padding: 3px 15px;
   border: none;
   background-color: #ebebeb;
@@ -262,12 +262,12 @@
   -webkit-box-shadow: 0 1px 1px #717171;
   -moz-box-shadow: 0 1px 1px #717171;
   box-shadow: 0 1px 1px #717171;
-  background-image: -webkit-linear-gradient(bottom, #f2c52c, #fbdc60);
-  background-image: -moz-linear-gradient(bottom, #f2c52c, #fbdc60);
-  background-image: -o-linear-gradient(bottom, #f2c52c, #fbdc60);
-  background-image: linear-gradient(to top, #f2c52c, #fbdc60);
+  background-image: -webkit-linear-gradient(to top, #10974c, #0e5d31);
+  background-image: -moz-linear-gradient(to top, #10974c, #0e5d31);
+  background-image: -o-linear-gradient(to top, #10974c, #0e5d31);
+  background-image: linear-gradient(to top, #10974c, #0e5d31);
   font-size: 14px;
-  color: #000;
+  color: #fff;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.81);
 }
 .header-authorisation-popup .line {
@@ -291,6 +291,7 @@
   float: left;
   width: 183px;
   margin-left: 23px;
+  margin-bottom: 4px;
 }
 .header-authorisation-popup .column:first-child {
   margin-left: 0;
@@ -330,20 +331,38 @@
   text-indent: -9999px;
   background: transparent url('../img/header-authorisation-popup-social-sprite.png') no-repeat 0 0;
 }
-.header-authorisation-popup .social-list li.vk a {
+.header-authorisation-popup .social-list li.popap-vk a {
   background-position: 0 0;
 }
-.header-authorisation-popup .social-list li.fb a {
+.header-authorisation-popup .social-list li.popap-fb a {
   background-position: -17px 0;
 }
-.header-authorisation-popup .social-list li.ok a {
+.header-authorisation-popup .social-list li.popap-ok a {
   background-position: -34px 0;
 }
-.header-authorisation-popup .social-list li.tw a {
+.header-authorisation-popup .social-list li.popap-tw a {
   background-position: -51px 0;
 }
-.header-authorisation-popup .social-list li.gp a {
+.header-authorisation-popup .social-list li.popap-gp a {
   background-position: -68px 0;
+}
+
+.user-forgot-password {
+  text-align: left;
+  top: 15px;
+  position: relative;
+  vertical-align: middle;
+  color: #000;
+}
+
+.user-forgot-password img {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+
+.user-forgot-password a {
+  color: #000;
 }
 
 
@@ -372,8 +391,8 @@
 
 /* auth */
 .-auth-popup-shown .header-authorisation-popup{
-  display: block;
-}
+   display: block;
+ }
 .-auth-popup-shown .header-authorisation-button {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -389,6 +408,7 @@
 }
 .-auth-popup-shown .header-authorisation-button span {
   text-decoration: none;
+  color: #000;
 }
 .header-auth-error,
 .header-reg-error{
@@ -412,3 +432,4 @@
   cursor: hand;
   visibility: hidden;
 }
+
